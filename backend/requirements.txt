@@ -1,0 +1,60 @@
+# FactoryMind - Backend dependencies
+# Target: Python 3.11 (stable wheel availability)
+#
+# Install in two stages so the CPU-only PyTorch wheels are fetched from the
+# PyTorch index without slowing resolution of everything else:
+#   pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r backend/requirements.txt
+#
+# On Linux CI, add the line below to requirements.txt to pull CUDA wheels:
+#   --extra-index-url https://download.pytorch.org/whl/cu121
+
+# --- Web / API ---
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.0
+python-multipart==0.0.20
+email-validator==2.2.0
+
+# --- Database ---
+SQLAlchemy==2.0.36
+alembic==1.14.0
+psycopg2-binary==2.9.10
+
+# --- Scientific stack ---
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+scikit-learn==1.5.2
+imbalanced-learn==0.12.4
+
+# --- Gradient boosting / explainability ---
+xgboost==2.1.3
+shap==0.46.0
+
+# --- Persistence / plotting ---
+joblib==1.4.2
+matplotlib==3.9.2
+
+# --- Deep learning (CPU wheels; install from the PyTorch CPU index) ---
+torch==2.5.1
+torchvision==0.20.1
+
+# --- Computer vision ---
+opencv-python-headless==4.10.0.84
+
+# --- Agentic AI ---
+langgraph==0.2.60
+langchain-core==0.3.29
+
+# --- RAG ---
+pypdf==5.1.0
+faiss-cpu==1.9.0.post1
+sentence-transformers==3.3.1
+
+# --- Testing / tooling ---
+pytest==8.3.4
+pytest-asyncio==0.25.0
+httpx==0.28.1
+ruff==0.8.6

@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-navy-950 text-slate-200;
+    background-image:
+      radial-gradient(900px 500px at 12% -8%, rgba(34, 211, 238, 0.07), transparent 60%),
+      radial-gradient(800px 460px at 92% 4%, rgba(59, 130, 246, 0.07), transparent 62%);
+    background-attachment: fixed;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-charcoal-600;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cyan-dim;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-white/[0.06] bg-charcoal-800/80 shadow-card backdrop-blur-sm;
+  }
+
+  .card-hover {
+    @apply transition-all duration-200 hover:border-cyan-brand/25 hover:shadow-glow;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold
+           transition-all duration-150 disabled:cursor-not-allowed disabled:opacity-45;
+  }
+  .btn-primary {
+    @apply btn bg-cyan-brand text-navy-950 hover:bg-cyan-300 active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply btn border border-white/10 bg-white/[0.04] text-slate-200 hover:border-cyan-brand/40 hover:bg-white/[0.07];
+  }
+  .btn-danger {
+    @apply btn border border-risk-critical/40 bg-risk-critical/10 text-risk-critical hover:bg-risk-critical/20;
+  }
+  .btn-ghost {
+    @apply btn text-slate-400 hover:bg-white/[0.05] hover:text-slate-100;
+  }
+
+  .label {
+    @apply mb-1.5 block text-[11px] font-semibold uppercase tracking-wider text-slate-400;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-white/10 bg-navy-900/70 px-3 py-2 text-sm text-slate-100
+           outline-none transition placeholder:text-slate-600
+           focus:border-cyan-brand/60 focus:ring-2 focus:ring-cyan-brand/[0.15];
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-[11px] font-semibold;
+  }
+  .badge-healthy {
+    @apply badge bg-risk-healthy/[0.12] text-risk-healthy ring-1 ring-inset ring-risk-healthy/30;
+  }
+  .badge-watch {
+    @apply badge bg-risk-watch/[0.12] text-risk-watch ring-1 ring-inset ring-risk-watch/30;
+  }
+  .badge-high {
+    @apply badge bg-risk-high/[0.12] text-risk-high ring-1 ring-inset ring-risk-high/30;
+  }
+  .badge-critical {
+    @apply badge bg-risk-critical/[0.12] text-risk-critical ring-1 ring-inset ring-risk-critical/30;
+  }
+  .badge-info {
+    @apply badge bg-azure-brand/[0.12] text-azure-brand ring-1 ring-inset ring-azure-brand/30;
+  }
+
+  .stat-label {
+    @apply text-[11px] font-semibold uppercase tracking-wider text-slate-500;
+  }
+  .stat-value {
+    @apply mt-1 text-2xl font-bold tabular-nums text-slate-50;
+  }
+
+  .mono {
+    @apply font-mono text-[12px];
+  }
+
+  .grid-bg {
+    @apply bg-grid;
+    background-size: 42px 42px;
+  }
+
+  .section-title {
+    @apply text-lg font-semibold tracking-tight text-slate-100;
+  }
+
+  .prose-note {
+    @apply rounded-lg border border-amber-500/25 bg-amber-500/[0.07] px-3 py-2 text-[12px] leading-relaxed text-amber-200/90;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-300 via-cyan-400 to-azure-brand bg-clip-text text-transparent;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

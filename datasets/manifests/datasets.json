@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-10-08T06:51:56.669294+00:00",
+  "datasets": {
+    "ai4i": {
+      "title": "AI4I 2020 Predictive Maintenance Dataset",
+      "publisher": "University of California, Irvine (UCI ML Repository)",
+      "landing_page": "https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset",
+      "doi": "10.24432/C52T6T",
+      "citation": "Susto, G., Paternostro, A., Bortolussi, K., De Martini, I., Nardi, F., Pagliuca, B., Pesarini, A., Pirizzini, F., Reggiani, F., and Ronci, A. (2020). Artificial Intelligence for Predictive Maintenance. Sensors, 20(21), 6164.",
+      "licence": "CC BY 4.0 (UCI ML Repository)",
+      "attempts": [],
+      "status": "downloaded",
+      "path": "datasets\\ai4i\\ai4i2020.csv",
+      "bytes": 522048,
+      "source_url": "https://archive.ics.uci.edu/static/public/601/ai4i+2020+predictive+maintenance+dataset.zip",
+      "sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e"
+    },
+    "cmapss": {
+      "title": "NASA C-MAPSS Turbofan Engine Degradation Simulation Data Set",
+      "publisher": "NASA Prognostics Center of Excellence (PHM'08 competition data)",
+      "landing_page": "https://data.nasa.gov/dataset/c-mapss-aircraft-engine-simulator-data",
+      "doi": null,
+      "citation": "Frederick, D., DeCastro, H., and Litt, J. (2007). User's Guide for the Commercial Modular Aero-Propulsion System Simulation (C-MAPSS). NASA/TM-2007-215026.",
+      "licence": "U.S. Government public domain (NASA)",
+      "attempts": [],
+      "status": "downloaded",
+      "path": "datasets\\nasa_cmapss\\cmapss",
+      "files": 12,
+      "source_url": "https://phm-datasets.s3.amazonaws.com/NASA/6.+Turbofan+Engine+Degradation+Simulation+Data+Set.zip"
+    },
+    "mvtec": {
+      "title": "MVTec AD (Visual Anomaly Detection) Dataset",
+      "publisher": "MVTec Software GmbH",
+      "landing_page": "https://www.mvtec.com/company/research/datasets/mvtec-ad",
+      "doi": "10.1109/CVPR.2019.00121",
+      "citation": "Bergmann, P., Batzfeld, K., Lange, K., Maeding, V., Missmann, S., ..., Zinkernagel, C. (2019). MVTec AD - A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection. 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 5392-5400.",
+      "licence": "CC BY-NC-SA 4.0 (research/non-commercial; registration required)",
+      "attempts": [],
+      "status": "unavailable",
+      "error": "MVTec AD requires manual acceptance of the non-commercial licence.\n  Underlying error: HTTP Error 404: Not Found\n  MANUAL STEPS:\n   1. Open https://www.mvtec.com/company/research/datasets/mvtec-ad\n   2. Download 'mvtec_anomaly_detection.tar.xz' (approx. 4.9 GB unpacked)\n   3. Extract it into datasets\\mvtec_ad\n      so that the 15 category folders live under datasets/mvtec_ad/mvtec_anomaly_detection/\n   4. Re-run: python backend/scripts/download_datasets.py --dataset mvtec --verify"
+    }
+  },
+  "generator": "backend/scripts/download_datasets.py"
+}

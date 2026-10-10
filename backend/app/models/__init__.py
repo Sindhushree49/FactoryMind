@@ -1,0 +1,31 @@
+from app.models.entities import (
+    AgentInvestigation,
+    Alert,
+    AnomalyEvent,
+    FailurePrediction,
+    KnowledgeDocument,
+    Machine,
+    MaintenanceHistory,
+    MaintenanceRecommendation,
+    ModelVersion,
+    RULPrediction,
+    SensorReading,
+    User,
+    VisualInspection,
+)
+
+__all__ = [
+    "AgentInvestigation",
+    "Alert",
+    "AnomalyEvent",
+    "FailurePrediction",
+    "KnowledgeDocument",
+    "Machine",
+    "MaintenanceHistory",
+    "MaintenanceRecommendation",
+    "ModelVersion",
+    "RULPrediction",
+    "SensorReading",
+    "User",
+    "VisualInspection",
+]

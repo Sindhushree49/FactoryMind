@@ -1,0 +1,80 @@
+# ---------------------------------------------------------------------------
+# FactoryMind - secrets
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# Node
+# ---------------------------------------------------------------------------
+node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-error.log*
+
+# ---------------------------------------------------------------------------
+# Datasets (large, re-fetchable via backend/scripts/download_datasets.py)
+# ---------------------------------------------------------------------------
+datasets/ai4i/*.csv
+datasets/ai4i/**/*.csv
+datasets/nasa_cmapss/**/*.txt
+datasets/mvtec_ad/**
+!datasets/mvtec_ad/README.md
+datasets/.cache/
+datasets/README.md
+
+# ---------------------------------------------------------------------------
+# Trained artefacts (regenerate with the training scripts)
+# ---------------------------------------------------------------------------
+models/**
+!models/README.md
+backend/scripts/output/**
+!backend/scripts/output/.gitkeep
+*.joblib
+*.pkl
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.h5
+
+# ---------------------------------------------------------------------------
+# Runtime storage
+# ---------------------------------------------------------------------------
+storage/documents/*
+!storage/documents/.gitkeep
+storage/reports/*
+!storage/reports/.gitkeep
+storage/vision/*
+!storage/vision/.gitkeep
+*.log
+*.sqlite3
+*.db
+
+# ---------------------------------------------------------------------------
+# Editors / OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
